@@ -8,6 +8,7 @@ const edad_input = document.querySelector("#edad");
 const form = document.querySelector("#saludar-form");
 const div = document.querySelector("#resultado-div");
 const genero_input = document.querySelector("#genero");
+const idioma_input = document.querySelector("#idioma");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -15,6 +16,13 @@ form.addEventListener("submit", (event) => {
   const nombre = nombre_input.value;
   const edad = Number.parseInt(edad_input.value);
   const genero = genero_input.value;
+  const idioma = idioma_input.value;
 
-  div.innerHTML = "<p> Hola " + obtenerSaludoSegunHora() + saludar(nombre, edad, genero) + "</p>";
+  if (idioma === "espa") {
+    div.innerHTML = "<p> Hola " + obtenerSaludoSegunHora(idioma) + saludar(nombre, edad, genero, idioma) + "</p>";
+  } else {
+    if (idioma === "english") {
+      div.innerHTML = "<p> Hi " + obtenerSaludoSegunHora(idioma) + saludar(nombre, edad, genero, idioma) + "</p>";
+    }
+  }
 });
