@@ -1,6 +1,7 @@
 // import sumar from "./sumador";
 // import multiplicar from "./multiplicar";
 import saludar from "./saludar";
+import obtenerSaludoSegunHora from "./saludoHora";
 
 const nombre_input = document.querySelector("#nombre");
 const edad_input = document.querySelector("#edad");
@@ -15,5 +16,5 @@ form.addEventListener("submit", (event) => {
   const edad = Number.parseInt(edad_input.value);
   const genero = genero_input.value;
 
-  div.innerHTML = "<p> Hola " + saludar(nombre, edad, genero) + "</p>";
+  div.innerHTML = "<p> Hola " + obtenerSaludoSegunHora() + saludar(nombre, edad, genero) + "</p>";
 });
