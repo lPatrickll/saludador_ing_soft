@@ -1,5 +1,5 @@
 function es_Mayor(edad) {
-    res = false;
+    let res = false;
     if (edad >= 30){
         res = true;
     }
