@@ -8,7 +8,10 @@ function saludar(name, edad, gen) {
         else
             return "Sra. " + name;
     else
-        return name;
+        if (genero(gen))
+            return "Joven " + name;
+        else
+            return "Señorita " + name;
 }
 
 export default saludar;
